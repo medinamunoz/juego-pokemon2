@@ -1,5 +1,10 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except:[:index]
+
+  def mypokemons
+    @pokemons = current_user.pokemons
+  end
 
   # GET /pokemons
   # GET /pokemons.json

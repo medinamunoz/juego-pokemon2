@@ -50,6 +50,7 @@ group :development do
   gem 'pry-rails'
   gem 'railroady'
   gem 'devise'
+  gem 'cancancan'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
